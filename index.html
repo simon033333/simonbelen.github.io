@@ -1,0 +1,413 @@
+<!DOCTYPE html> <!-- Declares the document type and version of HTML being used -->
+<html lang="en"> <!-- Defines the root element of the HTML document with the language attribute set to English -->
+<head>
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport for responsive design -->
+    <title>My Personal Web Page</title> <!-- Sets the title of the web page -->
+    <style>
+        /* Applies styles to the entire body of the page */
+        body {
+            font-family: Poppins, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        
+
+        header {
+            /* Ensure the background image covers the entire header */
+            background-image: url(file:///C:/Users/Baldrin%20Belen/Documents/Simon%20Jay%20F.%20Belen/Web%20Development/Personal%20Portfolio%20Website/131210-dark-blue-geometric-polygon-background-vector.jpg);
+            background-size: cover;
+            background-position: center;/* Center the background image */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Styles for the header section */
+        header h1 {
+            font-size: 42px;/* Styles for the heading within the header */
+        }
+        
+        
+        /* Styles for the navigation section */
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        /* Styles for navigation links */
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        
+        /* Styles for navigation links on hover */
+        nav a:hover {
+            background-color: #ddd;
+        }
+        
+        /* Styles for content sections */
+        section {
+            padding: 20px;
+        }
+        
+        /* Styles for the footer section */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+
+        /* Responsive Design. Adjusts the width and centers the content for larger screens */
+        @media only screen and (min-width: 600px) {
+            header, nav, section, footer {
+                width: 80%;
+                margin: 0 auto;
+            }   
+        }
+
+        /* Styles for the entire home section */
+        .home {
+            font-family: "Poppins", sans-serif;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border: 50px; 
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* Styles for the image container within the home section */
+        .home-img {
+            flex: 1; /* Let the image grow to fill available space */
+            display: flex;
+            justify-content: flex-end; /* Align the image to the right */
+            padding: 130px;
+            top: 10%;
+            left: 50%;
+        }
+
+        /* Styles for the image itself */
+        .home-img img {
+            height: 370px;
+            width: 370px;
+            padding: 10px;
+            border-radius: 50%;
+            border: 5px solid black;
+            box-shadow: 5px 5px 15px #999;
+        }
+
+        /* Styles for the text content within the home section */
+
+        /* Styles for specific text elements */
+        .home-text span {
+            font-size: 2.5rem;
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        .home-text h1 {
+            font-size: 4.2rem;
+            line-height: 1;
+            text-shadow: 2px 2px 2px gray;
+        }
+
+        .home-text h2 {
+            font-size: 1.7rem;
+            font-weight: 380;
+            line-height: 1;
+            color: #005E99;
+        }
+
+        .home-text p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin: 0.5rem 0.1rem;
+        }
+
+        /* Styles for the button section */
+        .btn{
+            display: inline-block;
+            background: darkblue;
+            color: white;
+            font-weight: bold;
+            padding: 20px;
+            width: 160px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: capitalize;
+            border: 0.6rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            -webkit-transition-duration:0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property:box-shadow,transform;
+            transition-property:box-shadow,transform ;
+
+        }
+        .btn:hover,.btn:focus,.btn:active{
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            background:var();
+            color: ;
+            -webskit-transform:scale(1.1);
+            transform: scale(1.1);
+        }
+
+        /* Styles for the text content within the personal information section */
+        #personal-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        .personal-info h2 {
+            background-color: #0F52BA;
+            color: white;
+            padding: 10px 20px;
+            margin-bottom: 50px;
+            width: 100%;
+            text-align: center;
+            font-size: 36px;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 80%;
+        }
+
+        .imageAboutPage {
+            width: 40%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-text {
+            width: 60%;
+            padding: 50px;
+            font-size: 18px;;
+        }
+
+        .about-text ul{
+            list-style: none;
+        }
+
+        /* Styles for the text content within the education section */
+        .education {
+            margin-bottom: 100px ;
+        }
+        .education h2 {
+            background-color: #0F52BA;
+            color: white;
+            padding: 10px 20px;
+            margin-bottom: 70px;
+            width: 100%;
+            text-align: center;
+            font-size: 36px;
+        }
+
+        .education li{
+            font-size: 18px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .education ul {
+             list-style: none;
+        }
+
+
+        /* Styles for the text content within the skills section */
+        .skills h2{
+             background-color: #0F52BA;
+            color: white;
+            padding: 10px 20px;
+            margin-bottom: 70px;
+            width: 100%;
+            text-align: center;
+            font-size: 36px;
+        }
+
+        .skills ul{
+            font-size: 18px;
+        }
+
+        .skills p{
+            font-size: 26px;
+        }
+
+
+        /* Styles for the text content within the projects section */
+        .projects{
+            margin-bottom: 100px;
+        }
+        .projects  h2 {
+            background-color: #0F52BA;
+            color: white;
+            padding: 10px 20px;
+            margin-bottom: 70px;
+            width: 100%;
+            text-align: center;
+            font-size: 36px;
+        }
+        .projects h4{
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .projects p{
+            text-indent: 1cm;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .projects video {
+            width: 50%; 
+            display: block;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- The main body of the webpage -->
+
+    <header> <!-- Header section containing the main heading -->
+        <h1>MY PERSONAL WEBPAGE</h1>
+    </header>
+
+    <div class="hero">  <!-- Hero section containing navigation links and main content -->
+        <nav> <!-- Navigation section containing links to different sections of the webpage -->
+            <a href="#home"><i class="fa fa-solid fa-house-chimney"></i>Home</a>  <!-- Home link -->
+            <a href="#personal-info"></i>About Me</a>   <!-- About Me link -->
+            <a href="#education"></i>Education</a>  <!-- Education link -->
+            <a href="#projects"><i class="fa-solid fa-icons"></i> Projects</a> <!-- Projects link -->
+            <a href="#skills"><i class="fa-solid fa-icons"></i> Skills</a>  <!-- Skills link -->
+            <a href="#contact"><i class="fa-solid fa-icons"></i> Contact Me</a> <!-- Contact Me link -->
+        </nav>
+    </div>
+
+<section Class="home" id="home"> <!-- Section tag used to define a section of the webpage, with the class "home" and id "home" -->
+    <Div Class="home-img">  <!-- Div tag used to group and style elements, with the class "home-img" -->
+        <img src="file:///C:/Users/Baldrin%20Belen/Documents/Simon%20Jay%20F.%20Belen/Web%20Development/Personal%20Portfolio%20Website/Belen%20-%202x2%20Picture.jpg"> <!-- Image tag used to display an image, with the source pointing to a local file -->
+    </Div>
+    <div class="home-text"> <!-- Div tag used to group and style elements, with the class "home-text" -->
+        <span><b>Hello, I’m </b></span>  <!-- Span tag used to group inline elements, used here for styling -->
+        <h1><b>Simon Jay</b></h1> <!-- Heading tag used for the main heading of the section -->
+        <h2>Information Technology Student</h2> <!-- Heading tag used for a subheading within the section -->
+        <P> <!-- Paragraph tag used to define a paragraph of text -->
+            I’m a Second Year College Student taking a Bachelor of Science in Information Technology at Laguna State Polytechnic University - San Pablo City Campus.
+        </P>
+        <a href="#personal-info" class="btn">More About Me</a> <!-- Anchor tag used to create a hyperlink, with the class "btn" for styling and a link to the "personal-info" section -->
+    </div>
+</section>
+
+
+<section id="personal-info" class="personal-info"> <!-- Section tag used to define a section of the webpage, with the id "personal-info" and class "personal-info" -->
+    <h2>PERSONAL INFORMATION</h2> <!-- Heading tag used for the main heading of the section -->
+    <div class="main"> <!-- Div tag used to group and style elements, with the class "main" -->
+        <img src="file:///C:/Users/Baldrin%20Belen/Documents/Simon%20Jay%20F.%20Belen/Web%20Development/Personal%20Portfolio%20Website/f8ffe710bad487c68c111f409aabc000.0.jpg" class="imageAboutPage" alt=""> <!-- Image tag used to display an image, with the class "imageAboutPage" for styling and alternate text provided -->
+        <div class="about-text">    <!-- Div tag used to group and style elements, with the class "about-text" -->
+            <p style="text-indent:1cm;"> <!-- Paragraph tag used to define a paragraph of text, with inline styling for indentation -->
+                I'm Simon Jay F. Belen, a second-year Information Technology student at Laguna State Polytechnic University - San Pablo City Campus. Passionate about learning and driven to succeed, I'm committed to developing my character, skills and achieving my goals. With a proactive mindset and determination, I'm ready to excel in the field of technology and make the most of every opportunity.
+            </p>
+
+            <ul>  <!-- Unordered list tag used to create a bulleted list -->
+                <li>Name    : <u><b>Simon Jay Frondozo Belen</b></u></li> <!-- List item tag used to define an item in the list, with inline styling for underline and bold text -->
+                <li>Birthday: <u><b>September 16, 2003</b></u></li> <!-- List item tag used to define an item in the list, with inline styling for underline and bold text -->
+                <li>Age     : <u><b>20</b></u></li> <!-- List item tag used to define an item in the list, with inline styling for underline and bold text -->
+                <li>Address : <u><b>Alaminos, Laguna, Philippines</b></u></li> <!-- List item tag used to define an item in the list, with inline styling for underline and bold text -->
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="education" class="education">    <!-- Section tag used to define a section of the webpage, with the id "education" and class "education" -->
+    <h2>EDUCATION</h2>   <!-- Heading tag used for the main heading of the section -->
+    <ul>    <!-- Unordered list tag used to create a bulleted list -->
+        <li>    <!-- List item tag used to define an item in the list -->
+            <p><b>Elementary</b><br>
+            San Agustin Elementary School, (2010-2016)</p>   <!-- Paragraph tag used to define a paragraph of text, with bold text for emphasis and line breaks for structure -->
+        </li>
+
+        <li>    <!-- List item tag used to define an item in the list -->
+            <p><b>Junior High School</b><br>
+            Buenaventura E. Fandialan Memorial Integrated National High School, (2016-2020)</p>    <!-- Paragraph tag used to define a paragraph of text, with bold text for emphasis and line breaks for structure -->
+        </li>
+        
+        <li>    <!-- List item tag used to define an item in the list -->
+            <p><b>Senior High School</b><br>
+            Buenaventura E. Fandialan Memorial Integrated National High School, (2020-2022)</p>    <!-- Paragraph tag used to define a paragraph of text, with bold text for emphasis and line breaks for structure -->
+        </li>
+        
+        <li>    <!-- List item tag used to define an item in the list -->
+            <p><b>Bachelor of Science in Information Technology</b><br>
+            Laguna State polytechnic University - San Pablo City Campus, (2022-2026)</p>    <!-- Paragraph tag used to define a paragraph of text, with bold text for emphasis and line breaks for structure -->
+        </li>
+    </ul>
+</section>
+
+
+<section id="skills" class="skills">    <!-- Section tag used to define a section of the webpage, with the id "skills" and class "skills" -->
+    <h2>SKILLS</h2>    <!-- Heading tag used for the main heading of the section -->
+    <ul>
+        <p><b>Hard Skills</b></p>
+        <li>Basic Knowledge in HTML and CSS</li>
+        <li>Basic Knowledge in <b>Java</b> and <b>C# Programming Language</b></li>
+        <li>Basic Knowledge in <b>MySQL</b></li>
+
+        <p><b>Soft Skills</b></p>
+        <li>Openness to new ideas and approaches</li>
+        <li>Proactive approach to learning and development</li>
+        <li>Taking initiative</li>
+        <li>Active listening</li>
+        <li>Presentation skills</li>
+        <li>Analytical thinking</li>
+        <li>Critical thinking</li>
+        <li>Creative problem-solving</li>
+    </ul>
+</section>
+
+<section id="projects" class="projects">    <!-- Section tag used to define a section of the webpage, with the id "projects" and class "projects" -->
+    <h2>PROJECTS</h2>   <!-- Heading tag used for the main heading of the section -->
+
+    <!-- First Video -->
+    <video autoplay src="file:///C:/Users/Baldrin%20Belen/Documents/Simon%20Jay%20F.%20Belen/Web%20Development/Personal%20Portfolio%20Website/VN20240105_161317.mp4"></video>    <!-- Video tag used to embed a video into the webpage with autoplay -->
+    <h4><a href="https://drive.google.com/file/d/1wO7FFHgDsSCZ8_dp2zap0EmDy9PRUeDq/view?usp=drive_link">Simple C# Breakout Game</a></h4> <!-- Heading tag used for the title of the project, with a link added to direct users to more information about the project -->
+    <p>This serves as our Final Project for the Course ITEP-204: Data Structure and Algorithm. This game was programmed using C# Windows Form. The goal of this game is to clear all the blocks by hitting them with a ball. The platform must catch the ball to keep it from falling.</p>    <!-- Paragraph tag used to provide a description of the project -->
+
+    <!-- Second Video -->
+    <video autoplay src="file:///C:/Users/Baldrin%20Belen/Documents/Simon%20Jay%20F.%20Belen/Web%20Development/Personal%20Portfolio%20Website/lv_0_20211109232527%20(1).mp4"></video>    <!-- Video tag used to embed a video into the webpage with autoplay -->
+    <h4><a href="https://drive.google.com/file/d/1orqE1j0-jlA8se0cZolHG8FHZUR5cXy-/view?usp=drive_link">Soap Commercial</a></h4> <!-- Heading tag used for the title of the project, with a link added to direct users to more information about the project -->
+    <p>This video was created as a partial fulfillment to the subject Multimedia and Information Literacy during Senior High School. It is a commercial about our proposed beauty soap product. This video was produced using mobile devices and mobile photo and video editing applications such as CapCut, Canva, and PicsArt.</p>   <!-- Paragraph tag used to provide a description of the project -->
+
+    <!-- Third Video -->
+    <video autoplay src="file:///C:/Users/Baldrin%20Belen/Documents/Simon%20Jay%20F.%20Belen/Web%20Development/Personal%20Portfolio%20Website/ITEP%20101_Digital%20Prototype_Aramil,%20Aaron%20Raven%20A._Belen,%20Simon%20Ja%20F._%20Carbungco,%20Cyrus%20U..mp4"></video>    <!-- Video tag used to embed a video into the webpage with autoplay -->
+    <h4><a href="https://drive.google.com/file/d/19WQvleiIm9iHuaw3SJsHy2ti7WsXfcOp/view?usp=drive_link">Quiz Go!</a></h4> <!-- Heading tag used for the title of the project, with a link added to direct users to more information about the project -->
+    <p>In this project we created a digital prototype of a quiz game. We used proto.io to create this digital prototype. We also design its UI/UX and its logo.</p>   <!-- Paragraph tag used to provide a description of the project -->
+</section>
+
+<footer>   <!-- Footer tag used to define the footer section of the webpage -->
+    <section id="contact">    <!-- Section tag used to define a section within the footer, with the id "contact" -->
+        <h2>Contact Me</h2>    <!-- Heading tag used for the heading within the contact section of the footer -->
+        <p>Email: simonjayf@gmail.com</p>    <!-- Paragraph tag used to display the email address -->
+        <p>Institutional Email: 0322-1819@lspu.edu.ph</p>   <!-- Paragraph tag used to display the institutional email address -->
+        <p>Facebook: <a href="https://www.facebook.com/simon.belen.3/" style="color: white;"><i class="fa fa-solid fa-house-chimney"></i>Simon Belen</a></p>    <!-- Paragraph tag used to display the Facebook profile link -->
+        <p>GitHub: <a href="https://github.com/simon033333" style="color: white;"><i class="fa fa-solid fa-house-chimney"></i>simon033333</a></p>    <!-- Paragraph tag used to display the Facebook profile link -->
+        <p>Phone: +639384451079</p>  <!-- Paragraph tag used to display the phone number -->
+    </section>    <!-- End of contact section -->
+
+    <p>&copy; 2024 | Simon Jay Belen | All Rights Reserved</p>   <!-- Paragraph tag used to display the copyright information -->
+</footer>   <!-- End of footer section -->
